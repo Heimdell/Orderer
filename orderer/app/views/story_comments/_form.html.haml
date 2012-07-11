@@ -1,6 +1,6 @@
 = simple_form_for @story_comment, :html => { :class => 'form-horizontal' } do |f|
-  = f.input :story_id
-  = f.input :user_id
+  = f.association :story, :required => true, :collection => Story.all.collect {|story| [story.content, story.id]}
+  = f.association :user, :required => true, :collection => User.all.collect {|user| [user.email, user.id]} 
   = f.input :content
   .form-actions
     = f.button :submit, :class => 'btn-primary'
