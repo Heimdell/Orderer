@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one: 
+    user_id: 1
+    content: Cool story bro
+    worker_id: 2
+    state: 0
+
+two:
+    user_id: 2
+    content: Cat is fine too
+    worker_id: 1
+    state: 0

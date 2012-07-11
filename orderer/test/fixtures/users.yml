@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+    email: test@test.com
+#   password: pAsSwOrd
+    password_digest: "$2a$10$I4KaZ1VXVlOK3W26KtkxZOlDCU5dy7bVyDiu8VaWRtqCIr0kZHO6."
+
+two:
+    email: will@it.fail
+#    password: have_no_password
+    password_digest: "$2a$10$02PjAgwiTCq8QoF7ArkAB.75cXx/T6OSxi2j6k5EsTktKPP8a5OPq"

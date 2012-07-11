@@ -1,0 +1,7 @@
+= simple_form_for @story_comment, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :story_id
+  = f.input :user_id
+  = f.input :content
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), story_comments_path, :class => 'btn'
