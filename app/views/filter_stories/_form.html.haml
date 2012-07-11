@@ -1,0 +1,7 @@
+= simple_form_for @story, :html => { :class => 'form-horizontal' } do |f|
+  = f.association :user, :required => true, :collection => User.all.collect {|user| [user.email, user.id]}
+  = f.input :content, :as => :text, :input_html => { :rows  => 5 }
+  = f.association :worker, :collection => User.all.collect {|user| [user.email, user.id]}
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), stories_path, :class => 'btn'
