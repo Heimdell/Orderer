@@ -4,7 +4,7 @@ class SessionController < ApplicationController
   end
 
   def create
-    user = User.find_by_email params["session"]["email"]
+    user = User.find_by_email(params["session"]["email"])
     if user && user.authenticate(params["session"]["password"])
       session[:user_id] = user.id
       redirect_to "/stories", :notice => "Logged in!"

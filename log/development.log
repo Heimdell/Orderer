@@ -35945,3 +35945,189 @@ ActionController::RoutingError (No route matches [GET] "/sign_out"):
 
 
   Rendered /var/lib/gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 12 20:41:48 +0400 2012
+Connecting to database specified by database.yml
+Processing by SessionController#create as HTML
+Completed 500 Internal Server Error in 26ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/session_controller.rb:7:in `create'
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 12 20:42:48 +0400 2012
+Processing by SessionController#new as HTML
+  Rendered session/_form.html.haml (64.6ms)
+  Rendered session/new.html.haml within layouts/application (90.8ms)
+Completed 200 OK in 568ms (Views: 557.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /session.css - 200 OK (10ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /users.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /application.css - 304 Not Modified (43ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (40ms)
+
+
+Started GET "/assets/filter_stories.css?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /filter_stories.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/stories.css?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /stories.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/story_comments.css?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /story_comments.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /jquery_ujs.js - 304 Not Modified (322ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:49 +0400 2012
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+Served asset /twitter/bootstrap.js - 304 Not Modified (67ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+Served asset /bootstrap.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/filter_stories.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+Served asset /filter_stories.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+Served asset /session.js - 200 OK (10ms)
+
+
+Started GET "/assets/stories.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+Served asset /stories.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/story_comments.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+Served asset /story_comments.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+Served asset /users.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+Served asset /application.js - 304 Not Modified (67ms)
+
+
+Started GET "/assets/twitter/bootstrap/glyphicons-halflings.png" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+Served asset /twitter/bootstrap/glyphicons-halflings.png - 304 Not Modified (12ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at Thu Jul 12 20:42:50 +0400 2012
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.4.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.6) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.6) lib/rails/commands.rb:55
+  railties (3.2.6) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.6) lib/rails/commands.rb:50
+  script/rails:6:in `require'
+  script/rails:6
+
+
+  Rendered /var/lib/gems/1.8/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)

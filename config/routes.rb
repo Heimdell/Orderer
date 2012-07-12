@@ -10,7 +10,7 @@ Orderer::Application.routes.draw do
   match '/sign_in',  :to => 'session#create'
   match '/sign_out', :to => 'session#destroy', :via => :delete
 
-  root :to => 'session#create'
+  root :to => 'session#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
