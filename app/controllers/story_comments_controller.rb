@@ -40,7 +40,7 @@ class StoryCommentsController < ApplicationController
   # POST /story_comments
   # POST /story_comments.json
   def create
-    @story_comment = StoryComment.new.build_from(params[:story_comment])
+    @story_comment = StoryComment.new(params[:story_comment])
 
     respond_to do |format|
       if @story_comment.save

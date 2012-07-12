@@ -2,11 +2,14 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.json
   def index
-    @stories = Story.all
+    @stories = Story.scoped
+
+    @stories = @stories.where(:user_id => params[:user])  if params[:user].present?  
+    @stories = @stories.where(:user_id => params[:state]) if params[:state].present?  
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render :json => @stories }
+      format.json { render :json => @stories.all }
     end
   end
 
@@ -40,7 +43,7 @@ class StoriesController < ApplicationController
   # POST /stories
   # POST /stories.json
   def create
-    @story = Story.new.build_from(params[:story])
+    @story = Story.new(params[:story])
 
     respond_to do |format|
       if @story.save

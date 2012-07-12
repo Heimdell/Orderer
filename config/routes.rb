@@ -4,6 +4,14 @@ Orderer::Application.routes.draw do
   resources :users
   resources :filter_stories
 
+  resources :sessions, :only => [:new, :create, :destroy]  
+
+  match "/sign_up",  :to => 'users#new'
+  match '/sign_in',  :to => 'session#create'
+  match '/sign_out', :to => 'session#destroy', :via => :delete
+
+  root :to => 'session#create'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -10,13 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120708081117) do
+ActiveRecord::Schema.define(:version => 20120712141652) do
 
   create_table "stories", :force => true do |t|
     t.integer  "user_id"
     t.string   "content"
     t.integer  "worker_id"
-    t.integer  "state"
+    t.string   "state"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
