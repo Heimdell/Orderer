@@ -1,4 +1,7 @@
 class StoryCommentsController < ApplicationController
+
+  before_filter :basic_auth, :only => [:state, :edit, :delete, :new, :create, :update, :destroy]
+  
   # GET /story_comments
   # GET /story_comments.json
   def index

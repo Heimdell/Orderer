@@ -43,4 +43,15 @@ class Story < ActiveRecord::Base
       transition :finished => :rejected
     end
   end
+  
+  def available_transitions
+    transitions = {}
+    
+    transitions[:accept] = true if can_accept?
+    transitions[:finish] = true if can_finish?
+    transitions[:reject] = true if can_reject?
+    transitions[:start]  = true if can_start?
+    
+    transitions
+  end
 end

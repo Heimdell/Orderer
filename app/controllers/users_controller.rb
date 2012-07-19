@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_filter :basic_auth, :only => [:state, :edit, :delete, :update, :destroy]
+
   # GET /users
   # GET /users.json
   def index

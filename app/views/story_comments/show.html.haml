@@ -5,11 +5,11 @@
 %p
   %strong= model_class.human_attribute_name(:story_id) + ':'
   %br
-  = @story_comment.story_id
+  = @story_comment.story.content
 %p
   %strong= model_class.human_attribute_name(:user_id) + ':'
   %br
-  = @story_comment.user_id
+  = @story_comment.user.email
 %p
   %strong= model_class.human_attribute_name(:content) + ':'
   %br

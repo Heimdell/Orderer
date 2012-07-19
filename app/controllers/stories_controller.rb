@@ -1,18 +1,42 @@
 class StoriesController < ApplicationController
+
+  before_filter :basic_auth, :only => [:state, :edit, :delete, :new, :create, :update, :destroy]
+
   # GET /stories
   # GET /stories.json
   def index
     @stories = Story.scoped
 
     @stories = @stories.where(:user_id => params[:user])  if params[:user].present?  
-    @stories = @stories.where(:user_id => params[:state]) if params[:state].present?  
+    @stories = @stories.where(:state => params[:state]) if params[:state].present?  
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @stories.all }
     end
   end
+  
+  # GET /stories/1/state
+  def state
+    @story = Story.find(params[:id])
+    @state = params[:state].to_sym
+    
+    @story.available_transitions.each do |action, _|
+      Rails.logger.debug @state
+    end
+    
+    if @story.available_transitions[@state]
 
+      @story.worker = current_user if @state == :start
+      @story.send(@state)
+      @story.save
+      
+      render :action => "show"
+    else
+      redirect_to "/422.html"
+    end
+  end
+  
   # GET /stories/1
   # GET /stories/1.json
   def show

@@ -1,15 +1,20 @@
 Orderer::Application.routes.draw do
+
+  match 'stories/:id/state/:state', :to => "stories#state"
+
   resources :story_comments
   resources :stories
   resources :users
   resources :filter_stories
 
-  resources :sessions, :only => [:new, :create, :destroy]  
+#  resources :sessions, :only => [:new, :create, :destroy]  
 
   match "/sign_up",  :to => 'users#new'
-  match '/sign_in',  :to => 'session#create'
-  match '/sign_out', :to => 'session#destroy', :via => :delete
-
+  
+#  match '/sign_in',  :to => 'session#create', :via => :post
+#  match '/sign_in',  :to => 'session#new'
+#  match '/sign_out', :to => 'session#destroy'
+  
   root :to => 'session#new'
 
   # The priority is based upon order of creation:

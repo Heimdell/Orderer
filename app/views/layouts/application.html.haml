@@ -9,7 +9,6 @@
     /[if lt IE 9]
       = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
     = stylesheet_link_tag "application", :media => "all"
-    %link(href="images/favicon.ico" rel="shortcut icon")
     %link(href="images/apple-touch-icon.png" rel="apple-touch-icon")
     %link(href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72")
     %link(href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114")
@@ -22,13 +21,12 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand(href="#") Orderer
+          %a.brand(href="#")= 'Orderer - ' + if current_user then current_user.email else 'guest' end
           .container.nav-collapse
             %ul.nav
               %li= link_to "Users", "/users"
               %li= link_to "Stories", "/stories"
               %li= link_to "Comments", "/story_comments"
-              %li= link_to "Log in", "/sign_in"
 
     .container
 
@@ -44,10 +42,9 @@
                 %li= link_to "Users", "/users"
                 %li= link_to "Stories", "/stories"
                 %li= link_to "Comments", "/story_comments"
-                %li= link_to "Log in", "/sign_in"
     
       %footer
-        %p &copy; Company 2012
+        %p &copy; Maelstrom - 2012
     /
       Javascripts
       \==================================================

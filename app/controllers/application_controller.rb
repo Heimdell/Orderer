@@ -1,4 +1,8 @@
 class ApplicationController < ActionController::Base
+  include AuthHelper
+
+#  before_filter :basic_auth
+
   protect_from_forgery
 
   private
